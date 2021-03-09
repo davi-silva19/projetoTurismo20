@@ -1,0 +1,7 @@
+{
+  "name": "projetoTurismo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
