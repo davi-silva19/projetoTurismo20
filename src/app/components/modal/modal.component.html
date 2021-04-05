@@ -1,0 +1,71 @@
+<!--Header Cardapios-->
+<ion-header >
+  <ion-toolbar *ngFor="let titulos of tituloModal" >
+    <ion-title  >{{titulos.nome}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="_dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--Header Povoados-->
+<ion-header >
+  <ion-toolbar *ngFor="let povoado of povoadoModal" >
+    <ion-title  >{{povoado.nome}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="_dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!--Cardapios Restaurante -->
+  <ion-card *ngFor="let cardapioRe of cardapioModal"  >  
+    <img  src="{{cardapioRe.imagem}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{cardapioRe.preco}}</ion-card-subtitle>
+      <ion-card-title>{{cardapioRe.nome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="ion-text-center">Complementos:</h1>
+      <h2>{{cardapioRe.complementos}}</h2>  
+    </ion-card-content>
+  </ion-card> 
+<!--Povoados -->
+  <ion-card *ngFor="let povoado of povoadoModal" >
+    <ion-slides pager="true" *ngFor="let imagem of imagemPovoado"  >
+      <ion-slide class="img-slide">
+          <ion-img class="img" src="{{imagem.img1}}" ></ion-img>
+      </ion-slide>
+      <ion-slide class="img-slide"  >       
+          <ion-img class="img" src="{{imagem.img2}}" ></ion-img>      
+      </ion-slide>
+      <ion-slide class="img-slide"  >        
+          <ion-img class="img" src="{{imagem.img3}}" ></ion-img>      
+      </ion-slide>
+      <ion-slide class="img-slide"  >        
+          <ion-img class="img" src="{{imagem.img4}}" ></ion-img>       
+      </ion-slide>
+      <ion-slide class="img-slide"  >       
+          <ion-img class="img" src="{{imagem.img5}}" ></ion-img>
+      </ion-slide>
+    </ion-slides>    
+    <ion-card-header>
+      <ion-card-title >{{povoado.nome}} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{povoado.msg}}
+    </ion-card-content>
+  </ion-card>
+</ion-content> 
+
+<!-- Povoados -->
+
+
+
+ 
+
+

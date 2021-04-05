@@ -34,7 +34,7 @@ const routes: Routes = [
   {
     path: 'historia',
     loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
-  },
+  }, 
 ];
 
 @NgModule({

@@ -8,28 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <div class="bg-home">
+  <ion-card *ngFor="let povoado of povoados" (click)="abrirDetalhes(povoado.nome)">
     <ion-card-header>
-      <ion-img src="/assets/monduriu.jpg"></ion-img>
-      <ion-card-subtitle>Povoado</ion-card-subtitle>
-      <ion-card-title>Rabeca</ion-card-title>
+      <ion-img class="img-grande" src="{{povoado.img}}"></ion-img>
+      <ion-card-subtitle class="ion-text-center">Povoado</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">{{povoado.nome}} </ion-card-title>
     </ion-card-header>
-
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
+    
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-img src="/assets/nome.jpg"></ion-img>
-      <ion-card-subtitle>Povoado</ion-card-subtitle>
-      <ion-card-title>Sumauma</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+</div>
 </ion-content>

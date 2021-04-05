@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Restaurante Esperança</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-home">
+    <div>
+      <ion-slides pager="true" >
+        <ion-slide>
+          <ion-card >
+            <ion-card-header>
+              <div class="img">
+                <ion-img  src="/assets/icon/img/nira/frente.jpeg" ></ion-img>
+              </div>
+              <ion-card-title>Restaurante Esperança</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card >
+            <ion-card-header>
+              <div class="img">
+                <ion-img id="img-grande" src="/assets/icon/img/nira/lado.jpeg" ></ion-img>
+              </div>
+            <ion-card-title>Restaurante Esperança</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div>
+      <ion-grid text-center>
+          <ion-row>
+              <ion-col size="6">
+                  <ion-button (click)="modalCardapio(cardapios)" class="large" size="large" expand="block" color="light">
+                      <div class="vertical">
+                          <ion-icon color="primary" slot="start" name="restaurant"></ion-icon>
+                          <span>Cardápio</span>
+                      </div>
+                  </ion-button>
+              </ion-col>
+
+              <ion-col size="6">
+                  <ion-button  class="large" size="large" color="light" expand="block">
+                      <div class="vertical">
+                          <ion-icon  color="primary" slot="start" name="call"></ion-icon>
+                          <span>Telefone</span>
+                      </div>
+                  </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button url="https://goo.gl/maps/xXSczUWsMWQ5fyu47" class="large" size="large" color="light" expand="block">
+                    <div class="vertical">
+                        <ion-icon color="primary" slot="start" name="location"></ion-icon>
+                        <span>Localização</span>
+                    </div>
+                </ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

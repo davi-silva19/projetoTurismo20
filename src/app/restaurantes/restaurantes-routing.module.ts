@@ -7,7 +7,16 @@ const routes: Routes = [
   {
     path: '',
     component: RestaurantesPage
-  }
+  },
+  {
+    path: 'esperanca',
+    loadChildren: () => import('./esperanca/esperanca.module').then( m => m.EsperancaPageModule)
+  },
+  {
+    path: 'r-portal',
+    loadChildren: () => import('./r-portal/r-portal.module').then( m => m.RPortalPageModule)
+  },
+  
 ];
 
 @NgModule({

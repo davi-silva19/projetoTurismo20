@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { PovoadosPage } from './povoados.page';
     IonicModule,
     PovoadosPageRoutingModule
   ],
-  declarations: [PovoadosPage]
+  declarations: [PovoadosPage],
+  
 })
 export class PovoadosPageModule {}
