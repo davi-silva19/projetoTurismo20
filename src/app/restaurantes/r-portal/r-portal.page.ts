@@ -30,7 +30,7 @@ export class RPortalPage implements OnInit {
   ];
   public titulo: Array<object> =[{"nome": "Cardapios"}]
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -58,5 +58,13 @@ export class RPortalPage implements OnInit {
 
      await modal.present();
   };
+  async telefoneAlert (){
+    const alert = await this.alertController.create({
+      header: "Telefone para Contato",
+      subHeader: "(98) 98433-8665",
+      buttons: ['Ok']
+    });
+    await alert.present();
+  }
 
 }

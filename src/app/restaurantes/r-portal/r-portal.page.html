@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -56,7 +56,7 @@
               </ion-col>
 
               <ion-col size="6">
-                  <ion-button  class="large" size="large" color="light" expand="block">
+                  <ion-button (click)="telefoneAlert ()" class="large" size="large" color="light" expand="block">
                       <div class="vertical">
                           <ion-icon color="primary" slot="start" name="call"></ion-icon>
                           <span>Telefone</span>
@@ -75,4 +75,5 @@
       </ion-grid>
     </div>
   </div>
+
 </ion-content>

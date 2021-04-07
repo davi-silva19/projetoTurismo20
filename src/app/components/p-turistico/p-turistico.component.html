@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title class="ion-text-center"> {{titulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="_dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-home">
+    <ion-card *ngFor="let igreja of igrejaModal" >
+          <ion-img src="{{igreja.img}}"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>{{igreja.local}}</ion-card-subtitle>
+            <ion-card-title>{{igreja.nome}}</ion-card-title>
+          </ion-card-header>
+    </ion-card>
+    <ion-card *ngFor="let rio of rioModal" >
+      <ion-img class="img" src="{{rio.img}}"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-center">{{rio.local}}</ion-card-subtitle>
+        <ion-card-title class="ion-text-center">{{rio.nome}}</ion-card-title>
+      </ion-card-header>
+</ion-card>
+  </div>
+
+
+
+</ion-content>
+
+

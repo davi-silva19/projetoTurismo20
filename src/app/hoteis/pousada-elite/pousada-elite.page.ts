@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
@@ -12,7 +12,8 @@ export class PousadaElitePage implements OnInit {
     "nome": "Localização",
     "url" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.535503803955!2d-44.63819555032663!3d-1.938283437223039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f7955ba9556313%3A0x14278f904794eeb2!2sPousada%20e%20Restaurante%20Portal%20dos%20Guar%C3%A1s!5e0!3m2!1spt-BR!2sbr!4v1617719320744!5m2!1spt-BR!2sbr"
   }]
-  constructor(private modalCtrl: ModalController) { }
+
+  constructor(private modalCtrl: ModalController, public alertController: AlertController) { }
   public valores: Array<object>= [{
     "nome": "Valores",
     "imagem": "/assets/icon/img/pousadae/quarto.jpeg",
@@ -65,5 +66,14 @@ export class PousadaElitePage implements OnInit {
     })
 
      await modal.present();
+  };
+  async telefoneAlert (){
+    const alert = await this.alertController.create({
+      header: "Telefone para Contato",
+      subHeader: "(98) 98456-6908",
+      buttons: ['Ok']
+    });
+    await alert.present();
   }
+
 }

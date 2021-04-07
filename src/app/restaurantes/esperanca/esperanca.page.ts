@@ -1,6 +1,6 @@
 import { ModalComponent } from './../../components/modal/modal.component';
 import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 
@@ -35,7 +35,7 @@ export class EsperancaPage implements OnInit {
 
 
   constructor(private modalCtrl: ModalController,
-     private geolocation: Geolocation) { }
+     private geolocation: Geolocation, public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -64,6 +64,14 @@ export class EsperancaPage implements OnInit {
 
      await modal.present();
   };
+  async telefoneAlert(){
+    const alert = await this.alertController.create({
+      header: "Telefone para Contato",
+      subHeader: "(98) 98433-8665",
+      buttons: ['Ok']
+    });
+    await alert.present();
+  }
 
 
 }

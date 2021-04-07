@@ -8,75 +8,59 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-img src="/assets/icon/img/pousadae/quarto.jpeg"></ion-img>
-    <ion-card-header>
-      <ion-card-subtitle>1 Cama de Solteiro</ion-card-subtitle>
-      <ion-card-title>Quarto de Casal Econômico </ion-card-title>
-    </ion-card-header>
+    <div class="bg-home " >
+      <ion-slides pager="true" [options]="slideOpts" >
+        <ion-slide *ngFor="let imagem of imagens" >
+              <div class="img">
+                <ion-img  src="{{imagem.img}}" ></ion-img>
+              </div>
+        </ion-slide>
 
-    <ion-grid text-center>
-      <ion-row>
-        <ion-col size="6" >
-          <ion-item color="dark">
-            <ion-avatar slot="start" color="primary">
-              <img src="/assets/fast-food-outline.svg">
-            </ion-avatar>
-            <p>Café da Manhã</p>
-          </ion-item>
-        </ion-col>
-        <ion-col size="6">
-          <ion-item color="dark">
-            <ion-avatar slot="start">
-              <img src="/assets/wifi.svg">
-            </ion-avatar>
-            <p>Wifi gratuito</p>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          <ion-item color="dark">
-            <ion-avatar slot="start">
-              <img src="/assets/snow-outline.svg">
-            </ion-avatar>
-            <p>Sem Ar-Condicionado</p>
-          </ion-item>
-        </ion-col>
-        <ion-col size="6">
-          <ion-item color="dark">
-            <ion-avatar slot="start">
-              <img src="/assets/rainy-outline.svg">
-            </ion-avatar>
-            <p>Sem banheiro</p>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          <ion-item color="dark">
-            <ion-avatar slot="start">
-              <img src="/assets/tv.svg">
-            </ion-avatar>
-            <p>Sem TV</p>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="2">
+      </ion-slides>
+      <div>
+        <ion-grid text-center>
+          <ion-row>
+              <ion-col size="6">
+                  <ion-button (click)="igrejasModal()" class="large" size="large" expand="block" color="light">
+                      <div class="vertical">
+                          <ion-icon color="primary" slot="start" name="home"></ion-icon>
+                          <span>Igrejas</span>
+                      </div>
+                  </ion-button>
+              </ion-col>
 
-      </ion-col>
-      <ion-col size="10">
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="/assets/card.svg">
-          </ion-avatar>
-          <p>Valor da Diaria: R$30,00</p>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+              <ion-col size="6">
+                  <ion-button (click)="riosModal()" class="large" size="large" color="light" expand="block">
+                      <div class="vertical">
+                          <ion-icon color="primary" slot="start" name="cloudy-sharp"></ion-icon>
+                          <span>Rios </span>
+                      </div>
+                  </ion-button>
+              </ion-col>
+
+              <ion-col size="6">
+                  <ion-button (click)="pracasModal()" class="large" size="large" color="light" expand="block">
+                      <div class="vertical">
+                          <ion-icon color="primary" slot="start" name="golf"></ion-icon>
+                          <span>Praças</span>
+                      </div>
+                  </ion-button>
+              </ion-col>
+
+              <ion-col size="6">
+                  <ion-button (click)="outrosModal()" class="large"  size="large" expand="block" color="light">
+                      <div class="vertical">
+                          <ion-icon color="primary" slot="start" name="ticket"></ion-icon>
+                          <span> Outros</span>
+                      </div>
+                  </ion-button>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+      </div>
+    </div>
+
+
+
+
 </ion-content>

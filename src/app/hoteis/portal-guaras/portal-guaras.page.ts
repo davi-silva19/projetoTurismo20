@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
@@ -38,9 +38,10 @@ public valores: Array<object>= [{
 }
 ];
 public titulo: Array<object> =[{"nome": "Valores"}]
+  AlertController: any;
 
 
-constructor(private modalCtrl: ModalController) { }
+constructor(private modalCtrl: ModalController, public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -66,5 +67,14 @@ constructor(private modalCtrl: ModalController) { }
     })
 
      await modal.present();
+  }
+
+  async telefoneAlert (){
+    const alert = await this.alertController.create({
+      header: "Telefone para Contato",
+      subHeader: "(98) 99991-3229",
+      buttons: ['Ok']
+    });
+    await alert.present();
   }
 }
