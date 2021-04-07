@@ -1,7 +1,7 @@
 <!--Header Cardapios-->
 <ion-header >
   <ion-toolbar *ngFor="let titulos of tituloModal" >
-    <ion-title  >{{titulos.nome}}</ion-title>
+    <ion-title class="ion-text-center">{{titulos.nome}}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="_dismiss()">
         <ion-icon slot="icon-only" name="close"></ion-icon>
@@ -9,6 +9,19 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<!--Header Localização Hoteis-->
+<ion-header >
+  <ion-toolbar *ngFor="let localiza of localizaModal" >
+    <ion-title  >Localização</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="_dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
 <!--Header Povoados-->
 <ion-header >
   <ion-toolbar *ngFor="let povoado of povoadoModal" >
@@ -23,7 +36,7 @@
 
 <ion-content >
   <!--Cardapios Restaurante -->
-  <ion-card *ngFor="let cardapioRe of cardapioModal"  >  
+  <ion-card *ngFor="let cardapioRe of cardapioModal"  >
     <img  src="{{cardapioRe.imagem}}">
     <ion-card-header>
       <ion-card-subtitle>{{cardapioRe.preco}}</ion-card-subtitle>
@@ -31,28 +44,28 @@
     </ion-card-header>
     <ion-card-content>
       <h1 class="ion-text-center">Complementos:</h1>
-      <h2>{{cardapioRe.complementos}}</h2>  
+      <h2>{{cardapioRe.complementos}}</h2>
     </ion-card-content>
-  </ion-card> 
+  </ion-card>
 <!--Povoados -->
   <ion-card *ngFor="let povoado of povoadoModal" >
     <ion-slides pager="true" *ngFor="let imagem of imagemPovoado"  >
       <ion-slide class="img-slide">
           <ion-img class="img" src="{{imagem.img1}}" ></ion-img>
       </ion-slide>
-      <ion-slide class="img-slide"  >       
-          <ion-img class="img" src="{{imagem.img2}}" ></ion-img>      
+      <ion-slide class="img-slide"  >
+          <ion-img class="img" src="{{imagem.img2}}" ></ion-img>
       </ion-slide>
-      <ion-slide class="img-slide"  >        
-          <ion-img class="img" src="{{imagem.img3}}" ></ion-img>      
+      <ion-slide class="img-slide"  >
+          <ion-img class="img" src="{{imagem.img3}}" ></ion-img>
       </ion-slide>
-      <ion-slide class="img-slide"  >        
-          <ion-img class="img" src="{{imagem.img4}}" ></ion-img>       
+      <ion-slide class="img-slide"  >
+          <ion-img class="img" src="{{imagem.img4}}" ></ion-img>
       </ion-slide>
-      <ion-slide class="img-slide"  >       
+      <ion-slide class="img-slide"  >
           <ion-img class="img" src="{{imagem.img5}}" ></ion-img>
       </ion-slide>
-    </ion-slides>    
+    </ion-slides>
     <ion-card-header>
       <ion-card-title >{{povoado.nome}} </ion-card-title>
     </ion-card-header>
@@ -60,12 +73,91 @@
       {{povoado.msg}}
     </ion-card-content>
   </ion-card>
-</ion-content> 
+<!--Localização Hoteis--->
+  <iframe *ngFor="let localizaPortal of localizaModal_Portal"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.535503803955!2d-44.63819555032663!3d-1.938283437223039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f7955ba9556313%3A0x14278f904794eeb2!2sPousada%20e%20Restaurante%20Portal%20dos%20Guar%C3%A1s!5e0!3m2!1spt-BR!2sbr!4v1617725472818!5m2!1spt-BR!2sbr"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <iframe *ngFor="let localizaPousda of localizaModal_PousadaElite"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.716511593341!2d-44.58531409265497!3d-1.8598449297742017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f78fd220761825%3A0x195a9be26356cb46!2sPousada%20Elite!5e0!3m2!1spt-BR!2sbr!4v1617726416970!5m2!1spt-BR!2sbr"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+   <iframe *ngFor="let localizaRes_Esp of localizaModal_Res_Esp" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.8581558274411!2d-44.58495735887299!3d-1.8599333960397693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaed0ea0634dd5882!2sRestaurante%20Esperan%C3%A7a!5e0!3m2!1spt-BR!2sbr!4v1617755362379!5m2!1spt-BR!2sbr"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+   <!--Valores dos Quartos Hotéis-->
+<ion-card *ngFor="let valoreshotel of valorModal" >
+  <ion-img  src="{{valoreshotel.imagem}}"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{valoreshotel.sub_titulo}}</ion-card-subtitle>
+    <ion-card-title>{{valoreshotel.titulo}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col size="6" >
+        <ion-item color="dark">
+          <ion-avatar slot="start" color="primary">
+            <img src="/assets/fast-food-outline.svg">
+          </ion-avatar>
+          <p>{{valoreshotel.cafe}}</p>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item color="dark">
+          <ion-avatar slot="start">
+            <img src="/assets/wifi.svg">
+          </ion-avatar>
+          <p>{{valoreshotel.wifi}}</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item color="dark">
+          <ion-avatar slot="start">
+            <img src="/assets/snow-outline.svg">
+          </ion-avatar>
+          <p>{{valoreshotel.ar_condicionado}}</p>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item color="dark">
+          <ion-avatar slot="start">
+            <img src="/assets/rainy-outline.svg">
+          </ion-avatar>
+          <p>{{valoreshotel.banheiro}}</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item color="dark">
+          <ion-avatar slot="start">
+            <img src="/assets/tv.svg">
+          </ion-avatar>
+          <p>{{valoreshotel.tv}}</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+      </ion-col>
+      <ion-col size="10">
+        <ion-item color="dark">
+          <ion-avatar slot="start">
+            <img src="/assets/card.svg">
+          </ion-avatar>
+          <p>Valor da Diaria: R${{valoreshotel.valor}}</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+  </ion-content>
 
 <!-- Povoados -->
 
 
 
- 
+
 
 

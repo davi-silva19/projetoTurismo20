@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: HoteisPage
+  },
+  {
+    path: 'portal-guaras',
+    loadChildren: () => import('./portal-guaras/portal-guaras.module').then( m => m.PortalGuarasPageModule)
+  },
+  {
+    path: 'pousada-elite',
+    loadChildren: () => import('./pousada-elite/pousada-elite.module').then( m => m.PousadaElitePageModule)
   }
 ];
 
