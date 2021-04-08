@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Igrejas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-home">
+    <ion-card *ngFor="let igreja of igrejas"  >
+          <ion-img src="{{igreja.img}}"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle class="ion-text-center">{{igreja.local}}</ion-card-subtitle>
+            <ion-card-title class="ion-text-center">{{igreja.nome}}</ion-card-title>
+          </ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+
+              </ion-col>
+              <ion-col size="6" (click)="abrirDetalhes(igreja.nome)">
+                <ion-chip>
+                  <ion-icon name="paper-plane" color="primary"></ion-icon>
+                  <ion-label>Ver Detalhes</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-card>
+
+  </div>
+</ion-content>

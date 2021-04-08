@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Outros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-home">
+    <ion-card *ngFor="let outro of outros"  >
+          <ion-img class="img" src="{{outro.img}}"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle class="ion-text-center">{{outro.local}}</ion-card-subtitle>
+            <ion-card-title class="ion-text-center">{{outro.nome}}</ion-card-title>
+          </ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+
+              </ion-col>
+              <ion-col size="6" (click)="abrirDetalhes(outro.nome)">
+                <ion-chip>
+                  <ion-icon name="paper-plane" color="primary"></ion-icon>
+                  <ion-label>Ver Detalhes</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+    </ion-card>
+
+  </div>
+</ion-content>

@@ -11,22 +11,35 @@
 
 <ion-content>
   <div class="bg-home">
-    <ion-card *ngFor="let igreja of igrejaModal" >
-          <ion-img src="{{igreja.img}}"></ion-img>
+    <!--Rios -->
+    <ion-card *ngFor="let rio of rioModal"  >
+          <ion-img class="img" src="{{rio.img}}"></ion-img>
           <ion-card-header>
-            <ion-card-subtitle>{{igreja.local}}</ion-card-subtitle>
-            <ion-card-title>{{igreja.nome}}</ion-card-title>
+            <ion-card-subtitle class="ion-text-center">{{rio.local}}</ion-card-subtitle>
+            <ion-card-title class="ion-text-center">{{rio.nome}}</ion-card-title>
           </ion-card-header>
+          <ion-card-content>{{rio.text}}</ion-card-content>
     </ion-card>
-    <ion-card *ngFor="let rio of rioModal" >
-      <ion-img class="img" src="{{rio.img}}"></ion-img>
+    <!--Outros-->
+    <ion-card *ngFor="let outro of outrosModal"  >
+      <ion-img class="img" src="{{outro.img}}"></ion-img>
       <ion-card-header>
-        <ion-card-subtitle class="ion-text-center">{{rio.local}}</ion-card-subtitle>
-        <ion-card-title class="ion-text-center">{{rio.nome}}</ion-card-title>
+        <ion-card-subtitle class="ion-text-center">{{outro.local}}</ion-card-subtitle>
+        <ion-card-title class="ion-text-center">{{outro.nome}}</ion-card-title>
       </ion-card-header>
+      <ion-card-content>{{outro.text}}</ion-card-content>
+  </ion-card>
+  <!--Igrejas-->
+  <ion-card *ngFor="let igreja of igrejasModal"  >
+    <ion-img class="img" src="{{igreja.img}}"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">{{igreja.local}}</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">{{igreja.nome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{igreja.text}}</ion-card-content>
 </ion-card>
-  </div>
 
+  </div>
 
 
 </ion-content>

@@ -21,7 +21,7 @@
         <ion-grid text-center>
           <ion-row>
               <ion-col size="6">
-                  <ion-button (click)="igrejasModal()" class="large" size="large" expand="block" color="light">
+                  <ion-button routerLink="/ponto-turistico/igrejas" class="large" size="large" expand="block" color="light">
                       <div class="vertical">
                           <ion-icon color="primary" slot="start" name="home"></ion-icon>
                           <span>Igrejas</span>
@@ -30,7 +30,7 @@
               </ion-col>
 
               <ion-col size="6">
-                  <ion-button (click)="riosModal()" class="large" size="large" color="light" expand="block">
+                  <ion-button routerLink="/ponto-turistico/rios" class="large" size="large" color="light" expand="block">
                       <div class="vertical">
                           <ion-icon color="primary" slot="start" name="cloudy-sharp"></ion-icon>
                           <span>Rios </span>
@@ -39,7 +39,7 @@
               </ion-col>
 
               <ion-col size="6">
-                  <ion-button (click)="pracasModal()" class="large" size="large" color="light" expand="block">
+                  <ion-button routerLink="/ponto-turistico/praca" class="large" size="large" color="light" expand="block">
                       <div class="vertical">
                           <ion-icon color="primary" slot="start" name="golf"></ion-icon>
                           <span>Praças</span>
@@ -48,7 +48,7 @@
               </ion-col>
 
               <ion-col size="6">
-                  <ion-button (click)="outrosModal()" class="large"  size="large" expand="block" color="light">
+                  <ion-button routerLink="/ponto-turistico/outros" class="large"  size="large" expand="block" color="light">
                       <div class="vertical">
                           <ion-icon color="primary" slot="start" name="ticket"></ion-icon>
                           <span> Outros</span>
@@ -59,8 +59,4 @@
       </ion-grid>
       </div>
     </div>
-
-
-
-
 </ion-content>
