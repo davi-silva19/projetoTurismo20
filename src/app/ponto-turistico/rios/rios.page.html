@@ -17,9 +17,12 @@
           </ion-card-header>
           <ion-grid>
             <ion-row>
-              <ion-col size="6">
-
-              </ion-col>
+                <ion-col size="6" (click)="localizacaoDetalhes(rio.nome)">
+                  <ion-chip>
+                    <ion-icon name="location" color="primary"></ion-icon>
+                    <ion-label>Localização</ion-label>
+                  </ion-chip>
+                </ion-col>
               <ion-col size="6" (click)="abrirDetalhes(rio.nome)">
                 <ion-chip>
                   <ion-icon name="paper-plane" color="primary"></ion-icon>

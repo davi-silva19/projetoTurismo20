@@ -13,13 +13,13 @@ export class RotaPage implements OnInit {
   enderecoDestino: google.maps.LatLng;
   private autoComplete = new google.maps.places.AutocompleteService();
   private direction= new google.maps.DirectionsService;
-  private directionsRender = new google.maps.DirectionsRenderer; 
+  private directionsRender = new google.maps.DirectionsRenderer;
 
 
 
   @ViewChild('map', {read: ElementRef, static: false}) mapRef: ElementRef;
   constructor(private geolocation: Geolocation) { }
-  
+
   ionViewWillEnter(){
    this.exibirMapa();
   }
@@ -33,9 +33,9 @@ export class RotaPage implements OnInit {
     };
     this.map = new google.maps.Map(this.mapRef.nativeElement, opcoes)
     this.buscarPosicao();
-    this.enderecoDestino= position;
+    this.buscarEndereco();
     this.tracarRota();
-    
+
   }
 
 
@@ -62,30 +62,34 @@ export class RotaPage implements OnInit {
       map: this.map
     })
   }
-  buscarEndereco(eventoCampoBusca){
-    const busca = eventoCampoBusca.target.value as string;
+  buscarEndereco(){
+    this.enderecoDestino = new google.maps.LatLng(-1.859932, -44.584246)
 
-    if(!busca.trim().length){return false}
-
-    this.autoComplete.getPlacePredictions({input: busca}, (arrayLocais, status) =>{
-     
-    });
+    const marker = new google.maps.Marker({
+      position: this.enderecoDestino,
+      title: 'Destino',
+      animation: google.maps.Animation.BOUNCE,
+      map: this.map
+    })
   }
- 
+
 
   public tracarRota(){
-    const rota: google.maps.DirectionsRequest ={
-      origin: this.minhaPosicao,
-      destination: this.enderecoDestino,
-      unitSystem: google.maps.UnitSystem.METRIC,
-      travelMode: google.maps.TravelMode.DRIVING
-    }
-    this.direction.route(rota, (status: any)=>{
-      if(status=='OK'){
-        this.directionsRender.setMap(this.map);
-        
+    new google.maps.Geocoder().geocode({location: this.enderecoDestino}, resultado =>{
+      const rota: google.maps.DirectionsRequest ={
+        origin: this.minhaPosicao,
+        destination: this.enderecoDestino,
+        unitSystem: google.maps.UnitSystem.METRIC,
+        travelMode: google.maps.TravelMode.DRIVING
       }
+      this.direction.route(rota, (resultado, status)=>{
+
+          this.directionsRender.setMap(this.map);
+          this.directionsRender.setDirections(resultado);
+
+      })
     })
+
   }
 
 

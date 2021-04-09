@@ -19,7 +19,15 @@
             <ion-card-title class="ion-text-center">{{rio.nome}}</ion-card-title>
           </ion-card-header>
           <ion-card-content>{{rio.text}}</ion-card-content>
+
     </ion-card>
+    <!--Localização Rios-->
+    <!--Localização Rio Verde-->
+    <iframe *ngFor="let rioverde of localiza_rioverde" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d483.9231650682158!2d-44.65102909614913!3d-1.9460009648295866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1617885701121!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!--Localização Rio Monduril-->
+    <iframe *ngFor="let riomonduril of localiza_monduril" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d498.44020554152024!2d-44.63686505249314!3d-1.9441589650710736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1617886081049!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!--Localização Fonte Grande-->
+    <iframe *ngFor="let fontegrande of localiza_fonteGrande" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d813.852060199401!2d-44.67692569460233!3d-1.959318316164189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1617887750619!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     <!--Outros-->
     <ion-card *ngFor="let outro of outrosModal"  >
       <ion-img class="img" src="{{outro.img}}"></ion-img>
@@ -29,6 +37,11 @@
       </ion-card-header>
       <ion-card-content>{{outro.text}}</ion-card-content>
   </ion-card>
+  <!--Localização Outros-->
+  <!--Localização Porto da Pedreira-->
+  <iframe *ngFor="let portopedreira of localiza_pedreira" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d996.9289309736065!2d-44.58195921666802!3d-1.8601934365718016!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1617888324292!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <!--Localização Atracadouro-->
+  <iframe *ngFor="let atracadouro of localiza_atracadouro" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1185.5160883274602!2d-44.622552863268!3d-1.917189528265553!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1617888804509!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   <!--Igrejas-->
   <ion-card *ngFor="let igreja of igrejasModal"  >
     <ion-img class="img" src="{{igreja.img}}"></ion-img>
@@ -38,7 +51,9 @@
     </ion-card-header>
     <ion-card-content>{{igreja.text}}</ion-card-content>
 </ion-card>
-
+<!--Localização Igrejas-->
+<iframe *ngFor="let assembleia of localiza_assembleia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.9762938555367!2d-44.58384406923711!3d-1.8588978331418855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f78fcde5b25a45%3A0xca3f24af9248c7b5!2sPaz!5e0!3m2!1spt-BR!2sbr!4v1617889944314!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<iframe *ngFor="let nsremedios of localiza_remediosModal" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d470.4662370766529!2d-44.64091707488891!3d-1.9393674000637398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1617890140206!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 
 

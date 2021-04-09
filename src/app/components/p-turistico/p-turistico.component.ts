@@ -12,6 +12,13 @@ export class PTuristicoComponent implements OnInit {
 @Input() rioModal: any[];
 @Input() outrosModal: any[];
 @Input() igrejasModal: any[];
+@Input() localiza_rioverde: any[];
+@Input() localiza_monduril: any[];
+@Input() localiza_fonteGrande: any[];
+@Input() localiza_pedreira: any[];
+@Input() localiza_atracadouro: any[];
+@Input() localiza_remediosModal: any[];
+@Input() localiza_assembleia: any[];
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
