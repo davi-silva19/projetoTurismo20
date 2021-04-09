@@ -47,7 +47,6 @@ public img_remanso: Array<object>=[]
       }];
       this.engenho=[{
         "nome": "Engenho do Lago",
-        "img": ["", "", ""],
         "msg": "A comunidade quilombola de Engenho do Lago fica a 10 Km de distancia da sede municipal de Porto Rico. O povoado é conhecido por sua principal economia que é a produção de Jussara e a produção de farinha de mandioca. Engenho tem como principal festejo o de São Benedito, que é um santo milagreiro protetor dos negros e do tambor de crioula, realizado no ultimo domingo do mês de setembro. Esse lindo povoado tem como principal atração turística riachos e grandes sítios que atraem muitos turistas. "
       }];
       this.santaMaria=[{
@@ -56,7 +55,6 @@ public img_remanso: Array<object>=[]
       }];
       this.remanso=[{
         "nome": "Remanso",
-        "img": ["", "", ""],
         "msg": "Remanso, é um dos terceiros povoados com mais habitantes do município de Porto Rico do Maranhão, percebe- se que ainda é pouco desenvolvido. Entretanto, as pessoas frequentam os barzinhos e a quadra esportiva que os jovens praticam esporte diurno ou noturno. O povoado tem vários rios , devido a falta de cuidado da população  ficaram impróprio para banhos e mergulhos. Porém, tem um riacho que é considerado o melhor dessa área, bem límpido e com temperatura ambiente. Em relação, aos traços culturais é predominante os blocos de rua no carnaval que arrasta muitos foliões."
       }]
       this.povoados = [
@@ -92,7 +90,7 @@ public img_remanso: Array<object>=[]
       },
       {
         "nome": "Remanso",
-        "img": "/assets/icon/img/comunidades/remanso.jpg",
+        "img": "/assets/icon/img/comunidades/remanso/remanso (1).jpg",
         "msg": "",
       }
     ]
@@ -139,11 +137,11 @@ public img_remanso: Array<object>=[]
       "img5": ["/assets/icon/img/comunidades/santamaria/santamaria_rio.jpg"],
     }];
     this.img_remanso =[{
-      "img1": ["/assets/icon/img/comunidades/santamaria/santamaria.jpg"],
-      "img2": ["/assets/icon/img/comunidades/santamaria/santamaria2.jpg"],
-      "img3": ["/assets/icon/img/comunidades/santamaria/santamaria_paisagem.jpg"],
-      "img4": ["/assets/icon/img/comunidades/santamaria/santamaria_homem.jpg"],
-      "img5": ["/assets/icon/img/comunidades/santamaria/santamaria_rio.jpg"],
+      "img1": ["/assets/icon/img/comunidades/remanso/remanso (1).jpg"],
+      "img2": ["/assets/icon/img/comunidades/remanso/remanso (2).jpg"],
+      "img3": ["/assets/icon/img/comunidades/remanso/remanso (3).jpg"],
+      "img4": ["/assets/icon/img/comunidades/remanso/remanso (4).jpg"],
+      "img5": ["/assets/icon/img/comunidades/remanso/remanso (5).jpg"],
     }]
 
 };
