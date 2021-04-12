@@ -10,7 +10,24 @@
 <ion-content >
   <div class="bg-home">
   <ion-card>
-    <ion-img src="/assets/ilhadospassaros.jpg" ></ion-img>
+    <ion-slides *ngFor="let imagem of imagens" >
+      <ion-slide>
+        <ion-img class="img" src="{{imagem.img1}}" ></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img class="img" src="{{imagem.img2}}" ></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img class="img" src="{{imagem.img3}}" ></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img class="img" src="{{imagem.img4}}" ></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img class="img" src="{{imagem.img5}}" ></ion-img>
+      </ion-slide>
+    </ion-slides>
+
     <ion-card-header>
       <ion-card-title >Historia de Porto Rico </ion-card-title>
     </ion-card-header>

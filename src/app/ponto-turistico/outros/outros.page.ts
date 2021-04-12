@@ -21,13 +21,13 @@ export class OutrosPage implements OnInit {
   {
     "nome": "Atracadouro Hidroviario",
     "local": "Povoado Cateaua",
-    "img": "/assets/icon/img/pturisticos/caiscateaua.jpg",
+    "img": "/assets/icon/img/pturisticos/atracadouro.jpeg",
     "text": ""
   }];
   public caisCateaua: Array<object>=[{
     "nome": "Atracadouro Hidroviario",
     "local": "Povoado Cateaua",
-    "img": "/assets/icon/img/pturisticos/caiscateaua.jpg",
+    "img": "/assets/icon/img/pturisticos/atracadouro.jpeg",
     "text": "Mais conhecido como balsa flutuante, o cais tem o nome de” Atracadouro Hidroviário “, ou seja, local onde se ancoram as embarcações. Todavia, o significado de Hidroviário é relativo a hidrovias, uma rota pré-determinada para o tráfego aquático, de suma importância para essestipos de transporte. Na atualidade, facilita embarques e desembarques das embarcações, principalmente barcos pesqueiros. Sendo um dos atrativos turísticos mais frequentado pelas pessoas, pois é ótimo para registrar momentos felizes com a brisa da maré batendo no rosto e no seu entrono uma natureza exuberante."
   }]
   public portoPedreira: Array<object>=[{
