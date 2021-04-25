@@ -7,5 +7,30 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div class="bg-home">
+    <ion-card *ngFor="let praca of pracas"  >
+          <ion-img class="img" src="{{praca.img}}"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle class="ion-text-center">{{praca.local}}</ion-card-subtitle>
+            <ion-card-title class="ion-text-center">{{praca.nome}}</ion-card-title>
+          </ion-card-header>
+          <ion-grid>
+            <ion-row>
+                <ion-col size="6" (click)="localizacaoDetalhes(praca.nome)">
+                  <ion-chip>
+                    <ion-icon name="location" color="primary"></ion-icon>
+                    <ion-label>Localização</ion-label>
+                  </ion-chip>
+                </ion-col>
+              <ion-col size="6" (click)="abrirDetalhes(praca.nome)">
+                <ion-chip>
+                  <ion-icon name="paper-plane" color="primary"></ion-icon>
+                  <ion-label>Ver Detalhes</ion-label>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </ion-card>
 
+  </div>
 </ion-content>

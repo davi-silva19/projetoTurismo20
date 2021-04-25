@@ -14,29 +14,29 @@ export class PousadaElitePage implements OnInit {
   }]
 
   constructor(private modalCtrl: ModalController, public alertController: AlertController) { }
-  public valores: Array<object>= [{
-    "nome": "Valores",
-    "imagem": "/assets/icon/img/pousadae/quarto.jpeg",
-    "sub_titulo": "1 Cama de Casal",
-    "titulo": "Quarto Casal Basico",
-    "cafe": "Café da Manhã",
-    "wifi": "Wifi Gratuito",
-    "ar_condicionado": "Sem Ar-condicionado",
-    "banheiro": "Com banheiro",
-    "tv": "Sem Tv",
-    "valor": "50,00",
+  public valores: Array<any>= [{
+    nome: "Valores",
+    imagem: "/assets/icon/img/pousadae/quarto.jpeg",
+    sub_titulo: "1 Cama de Casal",
+    titulo: "Quarto Casal Basico",
+    cafe: "Café da Manhã",
+    wifi: "Wifi Gratuito",
+    ar_condicionado: "Sem Ar-condicionado",
+    banheiro: "Com banheiro",
+    tv: "Sem Tv",
+    valor: "50,00",
   },
   {
-    "nome": "Valores",
-    "imagem": "/assets/icon/img/pousadae/quarto2.jpeg",
-    "sub_titulo": "1 Cama de Casal e 1 de Solteiro",
-    "titulo": "Quarto Casal Completo",
-    "cafe": "Café da Manhã",
-    "wifi": "Wifi Gratuito",
-    "ar_condicionado": "Com Ar-condicionado",
-    "banheiro": "Com banheiro",
-    "tv": "Com Tv",
-    "valor": "90,00",
+    nome: "Valores",
+    imagem: "/assets/icon/img/pousadae/quarto2.jpeg",
+    sub_titulo: "1 Cama de Casal e 1 de Solteiro",
+    titulo: "Quarto Casal Completo",
+    cafe: "Café da Manhã",
+    wifi: "Wifi Gratuito",
+    ar_condicionado: "Com Ar-condicionado",
+    banheiro: "Com banheiro",
+    tv: "Com Tv",
+    valor: "90,00",
   }
   ];
   public titulo: Array<object> =[{"nome": "Valores"}]

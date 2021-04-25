@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "projetoTurismo",
+  "appId": "com.davi.TurPortoRico",
+  "appName": "TurPortoRico",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

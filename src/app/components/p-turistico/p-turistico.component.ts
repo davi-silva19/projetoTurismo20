@@ -19,6 +19,9 @@ export class PTuristicoComponent implements OnInit {
 @Input() localiza_atracadouro: any[];
 @Input() localiza_remediosModal: any[];
 @Input() localiza_assembleia: any[];
+@Input() pracaModal: any[];
+@Input() localiza_pracaBetel: any[];
+
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {

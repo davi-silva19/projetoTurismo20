@@ -16,8 +16,7 @@ import { EsperancaPage } from './esperanca.page';
     IonicModule,
     EsperancaPageRoutingModule
   ],
-  declarations: [EsperancaPage, ModalComponent],
-  entryComponents: [ModalComponent],
+  declarations: [EsperancaPage],
   providers: [Geolocation]
 })
 export class EsperancaPageModule {}

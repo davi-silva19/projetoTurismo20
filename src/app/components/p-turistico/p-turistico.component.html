@@ -54,7 +54,19 @@
 <!--Localização Igrejas-->
 <iframe *ngFor="let assembleia of localiza_assembleia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.9762938555367!2d-44.58384406923711!3d-1.8588978331418855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f78fcde5b25a45%3A0xca3f24af9248c7b5!2sPaz!5e0!3m2!1spt-BR!2sbr!4v1617889944314!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 <iframe *ngFor="let nsremedios of localiza_remediosModal" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d470.4662370766529!2d-44.64091707488891!3d-1.9393674000637398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1617890140206!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
+  <!--Praças-->
+  <ion-card *ngFor="let pracas of pracaModal"  >
+    <ion-img class="img" src="{{pracas.img}}"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle class="ion-text-center">{{pracas.local}}</ion-card-subtitle>
+      <ion-card-title class="ion-text-center">{{pracas.nome}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{pracas.text}}</ion-card-content>
+</ion-card>
+
+<!--Localização Praças-->
+<iframe *ngFor="let pracabetel of localiza_pracaBetel"  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d646.4261193334702!2d-44.596532522425534!3d-1.8665035221660382!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1618928572214!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
 
 
 </ion-content>

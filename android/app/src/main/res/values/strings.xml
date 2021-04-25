@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">projetoTurismo</string>
-    <string name="title_activity_main">projetoTurismo</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">TurPortoRico</string>
+    <string name="title_activity_main">TurPortoRico</string>
+    <string name="package_name">com.davi.TurPortoRico</string>
+    <string name="custom_url_scheme">com.davi.TurPortoRico</string>
 </resources>

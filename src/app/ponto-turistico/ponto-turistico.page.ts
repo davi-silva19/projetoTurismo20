@@ -18,34 +18,34 @@ export class PontoTuristicoPage implements OnInit {
     shadowOffset: 20,
     shadowScale: 0.10,},
   };
-public imagens: Array<object>=[{
-  "img": "/assets/icon/img/pturisticos/slide/portal.jpg"
+public imagens: Array<any>=[{
+  img: "/assets/icon/img/pturisticos/slide/portal.jpg"
 },{
-  "img": "/assets/icon/img/pturisticos/slide/GOPR3516.JPG"
+  img: "/assets/icon/img/pturisticos/slide/GOPR3516.JPG"
 },
 {
-  "img": "/assets/icon/img/pturisticos/slide/GOPR2186.JPG"
+  img: "/assets/icon/img/pturisticos/slide/GOPR2186.JPG"
 },
 {
-  "img": "/assets/icon/img/pturisticos/slide/rabeca.jpeg"
+  img: "/assets/icon/img/pturisticos/slide/rabeca.jpeg"
 },
 {
-  "img": "/assets/icon/img/pturisticos/slide/49Porto Rico Noturna Drn.JPG"
+  img: "/assets/icon/img/pturisticos/slide/49Porto Rico Noturna Drn.JPG"
 },
 {
-  "img": "/assets/icon/img/pturisticos/slide/pedreira.jpg"
+  img: "/assets/icon/img/pturisticos/slide/pedreira.jpg"
 }]
-public rios: Array<object>=[{
-  "nome": "Rio Verde",
-  "local": "Povoado Rabeca",
-  "img": "/assets/icon/img/pturisticos/rios/rioverde1.jpg",
-  "text": ""
+public rios: Array<any>=[{
+  nome: "Rio Verde",
+  local: "Povoado Rabeca",
+  img: "/assets/icon/img/pturisticos/rios/rioverde1.jpg",
+  text: ""
 },
 {
-  "nome": "Rio Monduril",
-  "local": "Povoado Rabeca",
-  "img": "/assets/icon/img/pturisticos/rios/riomonduril1.jpg",
-  "text": ""
+  nome: "Rio Monduril",
+  local: "Povoado Rabeca",
+  img: "/assets/icon/img/pturisticos/rios/riomonduril1.jpg",
+  text: ""
 }]
 
 
